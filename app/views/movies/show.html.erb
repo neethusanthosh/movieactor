@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+
+<h4>List of Movies</h4>
+
+<% if @movie.actors.any? %>
+  <ul>
+    <% @movie.actors.each do |dino| %>
+      <li><%= dino.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no actors in this movie.</p>
+<% end %>
