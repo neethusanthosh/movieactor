@@ -5,12 +5,13 @@
   <%= @movie.name %>
 </p>
 
-<h4>List of Movies</h4>
+<h4>List of Actors</h4>
 
 <% if @movie.actors.any? %>
   <ul>
     <% @movie.actors.each do |dino| %>
-      <li><%= dino.name %></li>
+      <li><%=link_to dino.name, actor_path(dino.id) %></li>
+
     <% end %>
   </ul>
 <% else %>
